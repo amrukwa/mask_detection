@@ -10,4 +10,4 @@ cv.ellipse(img,(256,256),(50,50),0,90,180,255,1)
 cv.imshow("Display window", img)
 k = cv.waitKey(0)
 if k == ord("s"):
-    cv.imwrite("line.png", img)
+    cv.imwrite("picture.png", img)
