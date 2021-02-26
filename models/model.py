@@ -4,16 +4,20 @@ import cv2 as cv
 import glob
 import numpy as np
 
-mask_result = ["No mask detected!", "Incorrect mask placement!", "Mask well worn"]
-mask_coloring = [(255, 0, 0), (255, 0, 0), (0, 255, 0)]
+mask_result = ["No mask!", "Incorrect!", "Mask"]
 font = cv.FONT_HERSHEY_SIMPLEX
 
-def prepare_result(img, coords, results):
-    img_disp = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+def prepare_result(img, coords, results, is_matlpotlib=True):
+    if is_matlpotlib:
+        img_disp = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+        mask_coloring = [(255, 0, 0), (255, 0, 0), (0, 255, 0)]
+    else:
+        img_disp = img
+        mask_coloring = [(0, 0, 255), (0, 0, 255), (0, 255, 0)]
     i = 0
     for coord in coords:
         cv.rectangle(img_disp, (coord[0], coord[1]), (coord[0]+coord[2], coord[1]+coord[3]), mask_coloring[results[i]], 2)
-        cv.putText(img_disp, mask_result[results[i]],(coord[0], coord[1]-10), fontFace = font, fontScale=0.5, color=mask_coloring[results[i]],thickness=1, lineType=cv.LINE_AA)
+        cv.putText(img_disp, mask_result[results[i]],(coord[0], coord[1]-10), fontFace = font, fontScale=1, color=mask_coloring[results[i]],thickness=1, lineType=cv.LINE_AA)
         i += 1
     return img_disp
 

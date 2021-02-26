@@ -4,16 +4,22 @@ from models.preprocessing import get_faces
 from models.model import prepare_result
 from joblib import load
 import matplotlib.pyplot as plt
-from flask import Flask, request, Response, render_template
+import os
+from flask import Flask, flash, request, redirect, url_for, render_template, send_from_directory
+from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = '/uploads'
-ALLOWED_EXTENSIONS = {'jpg', 'png', 'jpeg'}
+face_detector = cv.CascadeClassifier('dataset/haarcascade_frontalface_default.xml')
+mask_detector = load('models/mask_detector.joblib')
+
+UPLOAD_FOLDER = './uploads'
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
@@ -33,25 +39,20 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('uploaded_file',
                                     filename=filename))
-    return '''
-    <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
-    <form method=post enctype=multipart/form-data>
-      <input type=file name=file>
-      <input type=submit value=Upload>
-    </form>
-    '''
-# face_detector = cv.CascadeClassifier('dataset/haarcascade_frontalface_default.xml')
-# mask_detector = load('models/mask_detector.joblib')
-# img = cv.imread("dataset/other_example.png")
-# if get_faces(img, face_detector, 1.2, 5) is not None:
-#     faces, coords = get_faces(img, face_detector, 1.2, 5, for_display=True)
-#     faces = [face for image in faces for face in image]
-#     faces_flattened = (np.array(faces)).reshape((len(coords), -1))
-#     res = mask_detector.predict(faces_flattened)
-#     img_display = prepare_result(img, coords, res)
-#     plt.imshow(img_display)
+    return render_template('upload.html')
 
-# else:
-#     print("No face detected")
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    img = cv.imread("uploads/" + filename)
+    if get_faces(img, face_detector, 1.2, 5) is not None:
+        faces, coords = get_faces(img, face_detector, 1.2, 5, for_display=True)
+        faces = [face for image in faces for face in image]
+        faces_flattened = (np.array(faces)).reshape((len(coords), -1))
+        res = mask_detector.predict(faces_flattened)
+        img_display = prepare_result(img, coords, res, is_matlpotlib=False)
+        cv.imwrite("uploads/display.png", img_display)
+        file_name = 'display.png'
+    else:
+        file_name = filename
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               file_name)
