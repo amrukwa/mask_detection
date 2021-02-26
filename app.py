@@ -1,7 +1,7 @@
 import numpy as np
 import cv2 as cv
-from model.preprocessing import get_faces
-from model.model import prepare_result
+from models.preprocessing import get_faces
+from models.model import prepare_result
 from joblib import load
 import matplotlib.pyplot as plt
 from flask import Flask, request, Response, render_template
@@ -40,7 +40,7 @@ def upload_file():
     </form>
     '''
 # face_detector = cv.CascadeClassifier('dataset/haarcascade_frontalface_default.xml')
-# mask_detector = load('model/mask_detector.joblib')
+# mask_detector = load('models/mask_detector.joblib')
 # img = cv.imread("dataset/other_example.png")
 # if get_faces(img, face_detector, 1.2, 5) is not None:
 #     faces, coords = get_faces(img, face_detector, 1.2, 5, for_display=True)

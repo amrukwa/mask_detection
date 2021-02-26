@@ -34,4 +34,4 @@ if __name__ == "__main__":
         labels = labels + labeled
     Data = (np.array(data)).reshape((len(labels), -1))
     mask_detector = RandomForestClassifier().fit(Data, labels)
-    dump(mask_detector, 'model/mask_detector.joblib') 
+    dump(mask_detector, 'models/mask_detector.joblib') 
