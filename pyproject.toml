@@ -14,6 +14,7 @@ opencv-python = "^4.5.1"
 jupyter = "^1.0.0"
 poetry = "^1.1.4"
 matplotlib = "^3.3.4"
+Flask = "^1.1.2"
 
 
 [tool.poetry.dev-dependencies]
