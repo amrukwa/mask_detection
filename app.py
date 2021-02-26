@@ -6,6 +6,9 @@ from joblib import load
 import matplotlib.pyplot as plt
 from flask import Flask, request, Response, render_template
 
+UPLOAD_FOLDER = '/uploads'
+ALLOWED_EXTENSIONS = {'jpg', 'png', 'jpeg'}
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
