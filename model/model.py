@@ -2,7 +2,6 @@ from sklearn.ensemble import RandomForestClassifier
 from joblib import dump
 import cv2 as cv
 import glob
-from preprocessing import get_faces
 import numpy as np
 
 mask_result = ["No mask detected!", "Incorrect mask placement!", "Mask well worn"]
@@ -20,6 +19,7 @@ def prepare_result(img, coords, results):
 
 
 if __name__ == "__main__":
+    from preprocessing import get_faces
     folders = ["dataset/without_mask/*.jpg", "dataset/incorrect_mask/*.jpg", "dataset/with_mask/*.jpg"]
     face_detector = cv.CascadeClassifier('dataset/haarcascade_frontalface_default.xml')
     data = []
