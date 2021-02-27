@@ -61,3 +61,7 @@ def uploaded_file(filename):
         file_name = filename
     return send_from_directory(app.config['UPLOAD_FOLDER'],
                                file_name)
+
+@app.route('/camera', methods=['GET', 'POST'])
+def access_camera():
+    return "Nothing here yet."
