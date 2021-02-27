@@ -3,6 +3,7 @@
 This project aims to create a simple mask detection model with the usage of openCV and scikit learn.
 ## The scheme
 Before finding masks in the picture, the program finds the faces first by the openCV Cascade Classifier. Then, cropped images are forwarded into the Random Forest Classifier. After being labeled as masked, unmasked or incorrectly masked, pictures are shown with the marked region and text annotation. All of the steps can be seen in the `workflow.ipynb` file.
+![mask-deteced](static/result.png)  
 ## The data
 As I wanted the model to be able to detect the third class - incorrect mask, I used [this](https://www.kaggle.com/spandanpatnaik09/face-mask-detectormask-not-mask-incorrect-mask) dataset. For showing the results on the different image I used the picture available [here](https://www.kaggle.com/andrewmvd/face-mask-detection).
 ## To be done
