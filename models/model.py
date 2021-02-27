@@ -13,7 +13,7 @@ def prepare_result(img, coords, results, is_matlpotlib=True):
         mask_coloring = [(0, 0, 255), (0, 0, 255), (0, 255, 0)]
     i = 0
     for coord in coords:
-        cv.rectangle(img_disp, (coord[0], coord[1]), (coord[0]+coord[2], coord[1]+coord[3]), mask_coloring[results[i]], 2)
+        cv.rectangle(img_disp, (coord[0], coord[1]), (coord[2], coord[3]), mask_coloring[results[i]], 2)
         cv.putText(img_disp, mask_result[results[i]],(coord[0], coord[1]-10), fontFace = font, fontScale=1, color=mask_coloring[results[i]],thickness=1, lineType=cv.LINE_AA)
         i += 1
     return img_disp
@@ -26,13 +26,13 @@ if __name__ == "__main__":
     from sklearn.ensemble import RandomForestClassifier
     
     folders = ["dataset/without_mask/*.jpg", "dataset/incorrect_mask/*.jpg", "dataset/with_mask/*.jpg"]
-    face_detector = cv.CascadeClassifier('dataset/haarcascade_frontalface_default.xml')
+    face_detector = cv.dnn.readNetFromCaffe("dataset/deploy.prototxt.txt", "dataset/res10_300x300_ssd_iter_140000.caffemodel")
     data = []
     labels = []
     for i in range(len(folders)):
         from_folder = glob.glob(folders[i])
         images = [cv.imread(img) for img in from_folder if cv.imread(img) is not None]
-        faces = [get_faces(image, face_detector, 1.2, 5) for image in images if get_faces(image, face_detector, 1.2, 5) is not None]
+        faces = [get_faces(image, face_detector) for image in images if get_faces(image, face_detector) is not None]
         faces = [face for image in faces for face in image]
         labeled = [i]*len(faces)
         data = data + faces
