@@ -25,13 +25,14 @@ if __name__ == "__main__":
     import glob
     from sklearn.ensemble import RandomForestClassifier
     
-    folders = ["dataset/without_mask/*.jpg", "dataset/incorrect_mask/*.jpg", "dataset/with_mask/*.jpg"]
+    exts = ["jpg","png"]
+    folders = ["dataset/without_mask/", "dataset/incorrect_mask/", "dataset/with_mask/"]
     face_detector = cv.dnn.readNetFromCaffe("dataset/deploy.prototxt.txt", "dataset/res10_300x300_ssd_iter_140000.caffemodel")
     data = []
     labels = []
     for i in range(len(folders)):
-        from_folder = glob.glob(folders[i])
-        images = [cv.imread(img) for img in from_folder if cv.imread(img) is not None]
+        from_folder = [glob.glob(folders[i]+'*.%s' % ext) for ext in exts]
+        images = [cv.imread(img) for i in from_folder for img in i if cv.imread(img) is not None]
         faces = [get_faces(image, face_detector) for image in images if get_faces(image, face_detector) is not None]
         faces = [face for image in faces for face in image]
         labeled = [i]*len(faces)
