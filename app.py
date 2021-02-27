@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import os
 from flask import Flask, flash, request, redirect, url_for, render_template, send_from_directory
 from werkzeug.utils import secure_filename
+from sklearn.ensemble import RandomForestClassifier
 
 face_detector = cv.CascadeClassifier('dataset/haarcascade_frontalface_default.xml')
 mask_detector = load('models/mask_detector.joblib')
