@@ -45,8 +45,8 @@ def upload_file():
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     img = cv.imread("uploads/" + filename)
-    if get_faces(img, face_detector, 1.2, 5) is not None:
-        faces, coords = get_faces(img, face_detector, 1.2, 5, for_display=True)
+    if get_faces(img, face_detector) is not None:
+        faces, coords = get_faces(img, face_detector, for_display=True)
         faces_flattened = (np.array(faces)).reshape((len(coords), -1))
         res = mask_detector.predict(faces_flattened)
         img_display = prepare_result(img, coords, res, is_matlpotlib=False)

@@ -20,8 +20,8 @@ while True:
         print("Can't receive frame (stream end?). Exiting ...")
         break
     # Our operations on the frame come here
-    if get_faces(img, face_detector, 1.2, 3) is not None:
-        faces, coords = get_faces(img, face_detector, 1.2, 3, for_display=True)
+    if get_faces(img, face_detector) is not None:
+        faces, coords = get_faces(img, face_detector, for_display=True)
         faces_flattened = (np.array(faces)).reshape((len(coords), -1))
         res = mask_detector.predict(faces_flattened)
         img_display = prepare_result(img, coords, res, is_matlpotlib=False)
