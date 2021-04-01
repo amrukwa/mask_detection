@@ -18,6 +18,10 @@ Pillow = "^8.1.2"
 jupyterlab-git = "^0.23.3"
 jupyterlab = "^3.0.12"
 numpy = "1.19.2"
+jupytext = "^1.11.1"
+jupyter-tensorboard = "^0.2.0"
+dlib = "^19.22.0"
+mtcnn = "^0.1.0"
 
 
 [tool.poetry.dev-dependencies]
