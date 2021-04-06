@@ -22,6 +22,11 @@ jupytext = "^1.11.1"
 jupyter-tensorboard = "^0.2.0"
 dlib = "^19.22.0"
 mtcnn = "^0.1.0"
+Cython = "^0.29.22"
+torch = "^1.8.1"
+torchvision = "^0.9.1"
+onnxruntime = "^1.7.0"
+importlib = "^1.0.4"
 
 
 [tool.poetry.dev-dependencies]
