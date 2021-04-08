@@ -1,3 +1,6 @@
 [submodule "3DDFA_V2"]
 	path = 3DDFA_V2
 	url = https://github.com/cleardusk/3DDFA_V2
+[submodule "yolov4_crowdhuman"]
+	path = yolov4_crowdhuman
+	url = https://github.com/jkjung-avt/yolov4_crowdhuman
