@@ -30,6 +30,7 @@ importlib = "^1.0.4"
 seaborn = "^0.11.1"
 insightface = "^0.1.5"
 mxnet = "^1.8.0"
+colorama = "^0.4.4"
 
 
 [tool.poetry.dev-dependencies]
