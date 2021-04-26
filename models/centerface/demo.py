@@ -27,7 +27,6 @@ def test_image(filename):
     
 def centerface_detect(img_list):
     results = {}
-    file = open(img_list)
     i = 0
     file = open(img_list, 'r')
     lines = file.readlines()
@@ -53,8 +52,6 @@ def centerface_detect(img_list):
         img_results["objects"] = objects
         results[str(i)] = img_results
         i += 1
-            # cv2.rectangle(frame, (int(boxes[0]), int(boxes[1])), (int(boxes[2]), int(boxes[3])), (2, 255, 0), 1)
-        # append or sth
     out_file = open("centerface_results.json", "w")
   
     json.dump(results, out_file, indent = 6)
