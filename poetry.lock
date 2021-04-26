@@ -296,6 +296,20 @@ optional = false
 python-versions = ">=2.7"
 
 [[package]]
+name = "facenet-pytorch"
+version = "2.5.2"
+description = "Pretrained Pytorch face detection and recognition models"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = "*"
+pillow = "*"
+requests = "*"
+torchvision = "*"
+
+[[package]]
 name = "filelock"
 version = "3.0.12"
 description = "A platform independent file lock."
@@ -1933,7 +1947,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.1"
-content-hash = "facad14a26d4fd7c714632e01ff5fb1adf0b6a3b8b731e2b77e917f52417099c"
+content-hash = "71fb2866f920aa72cc259dc375837a39aea39499b9d2bb631c8dd48f5672f5db"
 
 [metadata.files]
 anyio = [
@@ -2135,6 +2149,10 @@ easydict = [
 entrypoints = [
     {file = "entrypoints-0.3-py2.py3-none-any.whl", hash = "sha256:589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19"},
     {file = "entrypoints-0.3.tar.gz", hash = "sha256:c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"},
+]
+facenet-pytorch = [
+    {file = "facenet-pytorch-2.5.2.tar.gz", hash = "sha256:6188402b90f29b23f4de31834f275f8d8eea83d085c2845bad4bad80547b7b53"},
+    {file = "facenet_pytorch-2.5.2-py3-none-any.whl", hash = "sha256:5d4be649f86f5a09837a5972b143ddc65e19016f52eef6e4ee6afb0044253b98"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
