@@ -3,6 +3,7 @@ import scipy.io as sio
 import os
 from centerface import CenterFace
 import sys
+import json
 
 def test_image(filename):
     frame = cv2.imread(filename)
@@ -25,14 +26,17 @@ def test_image(filename):
 
     
 def centerface_detect(img_list):
+    results = {}
     file = open(img_list)
     i = 0
     file = open(img_list, 'r')
     lines = file.readlines()
     for filename in lines:
         filename = filename.rstrip()
-        filename = filename.replace("/am", "../..")
-        frame = cv2.imread(filename)
+        file_name = filename.replace("/am", "../..")
+        img_results = {"frame_id": i+1, "filename": filename}
+        objects = {}
+        frame = cv2.imread(file_name)
         h, w = frame.shape[:2]
         landmarks = True
         centerface = CenterFace(landmarks=landmarks)
@@ -40,11 +44,21 @@ def centerface_detect(img_list):
             dets, lms = centerface(frame, h, w, threshold=0.5)
         else:
             dets = centerface(frame, threshold=0.5)
-
+        j = 0
         for det in dets:
             boxes, score = det[:4], det[4]
+            coordinates = {"x_min": str(boxes[0]), "y_min": str(boxes[1]), "x_max": str(boxes[2]), "y_max": str(boxes[3])}           
+            objects[j] = {"coordinates": coordinates, "confidence": str(score)}
+            j += 1 
+        img_results["objects"] = objects
+        results[str(i)] = img_results
+        i += 1
             # cv2.rectangle(frame, (int(boxes[0]), int(boxes[1])), (int(boxes[2]), int(boxes[3])), (2, 255, 0), 1)
         # append or sth
+    out_file = open("centerface_results.json", "w")
+  
+    json.dump(results, out_file, indent = 6)
+    out_file.close()
 
 if __name__ == '__main__':
     # filename = sys.argv[1]
