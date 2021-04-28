@@ -26,6 +26,9 @@ argon2-cffi==20.1.0; python_version >= "3.6" \
     --hash=sha256:9dfd5197852530294ecb5795c97a823839258dfd5eb9420233c7cfedec2058f2 \
     --hash=sha256:e2db6e85c057c16d0bd3b4d2b04f270a7467c147381e8fd73cbbe5bc719832be \
     --hash=sha256:8a84934bd818e14a17943de8099d41160da4a336bcc699bb4c394bbb9b94bd32
+astor==0.8.1; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.4.0" \
+    --hash=sha256:070a54e890cefb5b3739d19f30f5a5ec840ffc9c50ffa7d23cc9fc1a38ebbfc5 \
+    --hash=sha256:6a6effda93f4e1ce9f618779b2dd1d9d84f1e32812c23a29b3fff6fd7f63fa5e
 async-generator==1.10; python_full_version >= "3.6.1" and python_version >= "3.6" \
     --hash=sha256:01c7bf666359b4967d2cda0000cc2e4af16a0ae098cbffcb8472fb9e8ad6585b \
     --hash=sha256:6ebb3d106c12920aaae42ccb6f787ef5eefdcdd166ea3d628fa8476abe712144
@@ -179,6 +182,11 @@ filelock==3.0.12; python_version >= "2.7" and python_full_version < "3.0.0" or p
 flask==1.1.2; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.5.0") \
     --hash=sha256:8a4fdd8936eba2512e9c85df320a37e694c93945b33ef33c89946a340a238557 \
     --hash=sha256:4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060
+gast==0.3.3; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.4.0") \
+    --hash=sha256:8f46f5be57ae6889a4e16e2ca113b1703ef17f2b0abceb83793eaba9e1351a45 \
+    --hash=sha256:b881ef288a49aa81440d2c5eb8aeefd4c2bb8993d5f50edae7413a85bfdb3b57 \
+    --hash=sha256:b7adcdd5adbebf1adf17378da5ba3f543684dbec47b1cda1f3997e573cd542c4 \
+    --hash=sha256:40feb7b8b8434785585ab224d1568b857edb18297e5a3047f1ba012bc83b42c1
 gdown==3.12.2 \
     --hash=sha256:4b3a1301e57bfd8dce939bf25ef8fbb4b23967fd0f878eede328bdcc41386bac
 gitdb==4.0.7; python_version >= "3.6" and python_version < "4" \
@@ -592,6 +600,17 @@ opencv-python==4.5.1.48; python_version >= "3.6" \
 packaging==20.9; python_version >= "3.6" and python_full_version < "3.0.0" and python_version < "4" or python_version >= "3.6" and python_version < "4" and python_full_version >= "3.5.0" \
     --hash=sha256:67714da7f7bc052e064859c05c595155bd1ee9f69f76557e21f051443c20947a \
     --hash=sha256:5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5
+paddlepaddle-gpu==2.0.2 \
+    --hash=sha256:c97a885765e34f0270dfc39709dd4056106a1af3270f40f3a36d70b2fc1be221 \
+    --hash=sha256:263589b904864f377c6ef4bf2c86687d3a8829468519b01aec216b0ba6a78712 \
+    --hash=sha256:45a30a5de7e7ec2c3deb8107007e6cd926178c3a434bda0f8b46837efcb74263 \
+    --hash=sha256:24435af687e0ec911bcadd900ac10fdf8ee474939bfdabbb95e755873f3db280 \
+    --hash=sha256:718335ebd4b9a2b51685a49592457b960d88c89e789d4adcdfa20eafe00e1466 \
+    --hash=sha256:467245b67a1aa7916bdad060f1ec9342155db2d6ff97774f5a026dc3b6d83c38 \
+    --hash=sha256:466107effd77baec17016ab95b662af9da23580340b1290e656b42c42a294436 \
+    --hash=sha256:879cb8185c4ca67503ed6b5ab5a654c8f60166747e6eafa5dff690aad3efb232 \
+    --hash=sha256:ed0608dc60460d9ef97e41a434c90a83a22c60eac1038200a4c5a102102dd17f \
+    --hash=sha256:c15eadea7c5406e7c22a79324216bfeb11a7b4bfd27503c1d39c981d29bbf70b
 pandas==1.2.3; python_full_version >= "3.7.1" \
     --hash=sha256:4d821b9b911fc1b7d428978d04ace33f0af32bb7549525c8a7b08444bce46b74 \
     --hash=sha256:9f5829e64507ad10e2561b60baf285c470f3c4454b007c860e77849b88865ae7 \

@@ -51,6 +51,14 @@ docs = ["sphinx"]
 tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pytest"]
 
 [[package]]
+name = "astor"
+version = "0.8.1"
+description = "Read/rewrite/write Python ASTs"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+
+[[package]]
 name = "async-generator"
 version = "1.10"
 description = "Async generators and context managers for Python 3.5+"
@@ -335,6 +343,22 @@ Werkzeug = ">=0.15"
 dev = ["pytest", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
 docs = ["sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
 dotenv = ["python-dotenv"]
+
+[[package]]
+name = "gast"
+version = "0.3.3"
+description = "Python AST that abstracts the underlying Python version"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "gast"
+version = "0.4.0"
+description = "Python AST that abstracts the underlying Python version"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "gdown"
@@ -1252,6 +1276,30 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 pyparsing = ">=2.0.2"
 
 [[package]]
+name = "paddlepaddle-gpu"
+version = "2.0.2"
+description = "Parallel Distributed Deep Learning"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+astor = "*"
+decorator = "*"
+gast = [
+    {version = ">=0.3.3", markers = "platform_system != \"Windows\""},
+    {version = "0.3.3", markers = "platform_system == \"Windows\""},
+]
+numpy = [
+    {version = ">=1.13", markers = "python_version >= \"3.5\" and platform_system != \"Windows\""},
+    {version = ">=1.13,<=1.19.3", markers = "python_version >= \"3.5\" and platform_system == \"Windows\""},
+]
+Pillow = "*"
+protobuf = ">=3.1.0"
+requests = ">=2.20.0"
+six = "*"
+
+[[package]]
 name = "pandas"
 version = "1.2.3"
 description = "Powerful data structures for data analysis, time series, and statistics"
@@ -1970,7 +2018,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.1"
-content-hash = "18311ace05f3d419d1770a701f4de3b6bf393b43daf9df20d4f43872c687bc7d"
+content-hash = "28afec3d06cdf7bdde08568b1f747312249b4f0f2272dffbfeb85ce5067ab820"
 
 [metadata.files]
 anyio = [
@@ -2004,6 +2052,10 @@ argon2-cffi = [
     {file = "argon2_cffi-20.1.0-cp38-cp38-win_amd64.whl", hash = "sha256:9dfd5197852530294ecb5795c97a823839258dfd5eb9420233c7cfedec2058f2"},
     {file = "argon2_cffi-20.1.0-cp39-cp39-win32.whl", hash = "sha256:e2db6e85c057c16d0bd3b4d2b04f270a7467c147381e8fd73cbbe5bc719832be"},
     {file = "argon2_cffi-20.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:8a84934bd818e14a17943de8099d41160da4a336bcc699bb4c394bbb9b94bd32"},
+]
+astor = [
+    {file = "astor-0.8.1-py2.py3-none-any.whl", hash = "sha256:070a54e890cefb5b3739d19f30f5a5ec840ffc9c50ffa7d23cc9fc1a38ebbfc5"},
+    {file = "astor-0.8.1.tar.gz", hash = "sha256:6a6effda93f4e1ce9f618779b2dd1d9d84f1e32812c23a29b3fff6fd7f63fa5e"},
 ]
 async-generator = [
     {file = "async_generator-1.10-py3-none-any.whl", hash = "sha256:01c7bf666359b4967d2cda0000cc2e4af16a0ae098cbffcb8472fb9e8ad6585b"},
@@ -2184,6 +2236,12 @@ filelock = [
 flask = [
     {file = "Flask-1.1.2-py2.py3-none-any.whl", hash = "sha256:8a4fdd8936eba2512e9c85df320a37e694c93945b33ef33c89946a340a238557"},
     {file = "Flask-1.1.2.tar.gz", hash = "sha256:4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060"},
+]
+gast = [
+    {file = "gast-0.3.3-py2.py3-none-any.whl", hash = "sha256:8f46f5be57ae6889a4e16e2ca113b1703ef17f2b0abceb83793eaba9e1351a45"},
+    {file = "gast-0.3.3.tar.gz", hash = "sha256:b881ef288a49aa81440d2c5eb8aeefd4c2bb8993d5f50edae7413a85bfdb3b57"},
+    {file = "gast-0.4.0-py3-none-any.whl", hash = "sha256:b7adcdd5adbebf1adf17378da5ba3f543684dbec47b1cda1f3997e573cd542c4"},
+    {file = "gast-0.4.0.tar.gz", hash = "sha256:40feb7b8b8434785585ab224d1568b857edb18297e5a3047f1ba012bc83b42c1"},
 ]
 gdown = [
     {file = "gdown-3.12.2.tar.gz", hash = "sha256:4b3a1301e57bfd8dce939bf25ef8fbb4b23967fd0f878eede328bdcc41386bac"},
@@ -2658,6 +2716,18 @@ opencv-python = [
 packaging = [
     {file = "packaging-20.9-py2.py3-none-any.whl", hash = "sha256:67714da7f7bc052e064859c05c595155bd1ee9f69f76557e21f051443c20947a"},
     {file = "packaging-20.9.tar.gz", hash = "sha256:5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5"},
+]
+paddlepaddle-gpu = [
+    {file = "paddlepaddle_gpu-2.0.2-cp27-cp27m-win_amd64.whl", hash = "sha256:c97a885765e34f0270dfc39709dd4056106a1af3270f40f3a36d70b2fc1be221"},
+    {file = "paddlepaddle_gpu-2.0.2-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:263589b904864f377c6ef4bf2c86687d3a8829468519b01aec216b0ba6a78712"},
+    {file = "paddlepaddle_gpu-2.0.2-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:45a30a5de7e7ec2c3deb8107007e6cd926178c3a434bda0f8b46837efcb74263"},
+    {file = "paddlepaddle_gpu-2.0.2-cp35-cp35m-win_amd64.whl", hash = "sha256:24435af687e0ec911bcadd900ac10fdf8ee474939bfdabbb95e755873f3db280"},
+    {file = "paddlepaddle_gpu-2.0.2-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:718335ebd4b9a2b51685a49592457b960d88c89e789d4adcdfa20eafe00e1466"},
+    {file = "paddlepaddle_gpu-2.0.2-cp36-cp36m-win_amd64.whl", hash = "sha256:467245b67a1aa7916bdad060f1ec9342155db2d6ff97774f5a026dc3b6d83c38"},
+    {file = "paddlepaddle_gpu-2.0.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:466107effd77baec17016ab95b662af9da23580340b1290e656b42c42a294436"},
+    {file = "paddlepaddle_gpu-2.0.2-cp37-cp37m-win_amd64.whl", hash = "sha256:879cb8185c4ca67503ed6b5ab5a654c8f60166747e6eafa5dff690aad3efb232"},
+    {file = "paddlepaddle_gpu-2.0.2-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:ed0608dc60460d9ef97e41a434c90a83a22c60eac1038200a4c5a102102dd17f"},
+    {file = "paddlepaddle_gpu-2.0.2-cp38-cp38-win_amd64.whl", hash = "sha256:c15eadea7c5406e7c22a79324216bfeb11a7b4bfd27503c1d39c981d29bbf70b"},
 ]
 pandas = [
     {file = "pandas-1.2.3-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:4d821b9b911fc1b7d428978d04ace33f0af32bb7549525c8a7b08444bce46b74"},
