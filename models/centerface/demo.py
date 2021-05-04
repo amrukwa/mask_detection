@@ -52,6 +52,7 @@ def centerface_detect(img_list):
         img_results["objects"] = objects
         results[str(i)] = img_results
         i += 1
+    file.close()
     out_file = open("centerface_results.json", "w")
   
     json.dump(results, out_file, indent = 6)
