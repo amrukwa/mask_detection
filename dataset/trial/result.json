@@ -1,0 +1,68 @@
+[
+{
+ "frame_id":1, 
+ "filename":"/am/dataset/second_approach/images/maksssksksss521.png", 
+ "objects": [ 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.549852, "center_y":0.497370, "width":0.961791, "height":1.052031}, "confidence":0.838656}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.560958, "center_y":0.296176, "width":0.271254, "height":0.535525}, "confidence":0.971510}
+ ] 
+}, 
+{
+ "frame_id":2, 
+ "filename":"/am/dataset/second_approach/images/maksssksksss473.png", 
+ "objects": [ 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.807195, "center_y":0.644295, "width":0.350778, "height":0.741646}, "confidence":0.980049}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.335215, "center_y":0.541399, "width":0.328101, "height":0.926765}, "confidence":0.799873}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.605070, "center_y":0.514201, "width":0.356972, "height":0.959893}, "confidence":0.791745}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.228878, "center_y":0.643074, "width":0.361385, "height":0.783121}, "confidence":0.771158}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.640156, "center_y":0.193454, "width":0.106723, "height":0.289573}, "confidence":0.993840}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.176365, "center_y":0.452279, "width":0.116218, "height":0.305596}, "confidence":0.988871}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.318363, "center_y":0.268422, "width":0.103872, "height":0.311341}, "confidence":0.985515}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.780609, "center_y":0.429856, "width":0.102110, "height":0.298690}, "confidence":0.980528}
+ ] 
+}, 
+{
+ "frame_id":3, 
+ "filename":"/am/dataset/second_approach/images/maksssksksss110.png", 
+ "objects": [ 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.659932, "center_y":0.716608, "width":0.312499, "height":0.594732}, "confidence":0.751829}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.172962, "center_y":0.704428, "width":0.297215, "height":0.547106}, "confidence":0.626490}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.394411, "center_y":0.716059, "width":0.386307, "height":0.576710}, "confidence":0.605991}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.878865, "center_y":0.711686, "width":0.240968, "height":0.554499}, "confidence":0.584195}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.451363, "center_y":0.803409, "width":0.301110, "height":0.387551}, "confidence":0.457609}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.077602, "center_y":0.777339, "width":0.158745, "height":0.441540}, "confidence":0.435720}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.930204, "center_y":0.602002, "width":0.152353, "height":0.717406}, "confidence":0.410128}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.231662, "center_y":0.616821, "width":0.241042, "height":0.727951}, "confidence":0.398818}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.206157, "center_y":0.801357, "width":0.211796, "height":0.383387}, "confidence":0.391114}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.507647, "center_y":0.597505, "width":0.223689, "height":0.854824}, "confidence":0.296130}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.824691, "center_y":0.609921, "width":0.219163, "height":0.767041}, "confidence":0.266758}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.085441, "center_y":0.645704, "width":0.157303, "height":0.681898}, "confidence":0.256277}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.658225, "center_y":0.549272, "width":0.275817, "height":0.815927}, "confidence":0.256172}, 
+  {"class_id":1, "name":"person", "relative_coordinates":{"center_x":0.357715, "center_y":0.618848, "width":0.213774, "height":0.554884}, "confidence":0.251825}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.680984, "center_y":0.383320, "width":0.120739, "height":0.236998}, "confidence":0.964388}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.071338, "center_y":0.432135, "width":0.131410, "height":0.255824}, "confidence":0.946880}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.641961, "center_y":0.597736, "width":0.122340, "height":0.268186}, "confidence":0.945640}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.217097, "center_y":0.428012, "width":0.115762, "height":0.218804}, "confidence":0.929689}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.231236, "center_y":0.091779, "width":0.087265, "height":0.169139}, "confidence":0.924016}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.219086, "center_y":0.803554, "width":0.161302, "height":0.350107}, "confidence":0.918080}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.490065, "center_y":0.293830, "width":0.113755, "height":0.212174}, "confidence":0.893880}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.360447, "center_y":0.623081, "width":0.171915, "height":0.405848}, "confidence":0.823886}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.624166, "center_y":0.090184, "width":0.091046, "height":0.152148}, "confidence":0.771538}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.362846, "center_y":0.847798, "width":0.162874, "height":0.284023}, "confidence":0.732338}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.824866, "center_y":0.458370, "width":0.130716, "height":0.276888}, "confidence":0.591005}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.085584, "center_y":0.098053, "width":0.084125, "height":0.182167}, "confidence":0.546395}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.643138, "center_y":0.276412, "width":0.099539, "height":0.181280}, "confidence":0.540285}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.975479, "center_y":0.075182, "width":0.051852, "height":0.138199}, "confidence":0.507540}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.706536, "center_y":0.963865, "width":0.134778, "height":0.074308}, "confidence":0.497499}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.926186, "center_y":0.279915, "width":0.100339, "height":0.185650}, "confidence":0.496317}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.726148, "center_y":0.775944, "width":0.205621, "height":0.328999}, "confidence":0.459053}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.699079, "center_y":0.866076, "width":0.273757, "height":0.261156}, "confidence":0.450104}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.161049, "center_y":0.568529, "width":0.126086, "height":0.304962}, "confidence":0.384758}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.453913, "center_y":0.748965, "width":0.111024, "height":0.230728}, "confidence":0.356270}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.938092, "center_y":0.776626, "width":0.112308, "height":0.343309}, "confidence":0.319728}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.373975, "center_y":0.408564, "width":0.132618, "height":0.252985}, "confidence":0.284462}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.572172, "center_y":0.242551, "width":0.082667, "height":0.125280}, "confidence":0.271901}, 
+  {"class_id":0, "name":"head", "relative_coordinates":{"center_x":0.147054, "center_y":0.223668, "width":0.088968, "height":0.152580}, "confidence":0.252518}
+ ] 
+}
+]

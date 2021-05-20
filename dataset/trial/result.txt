@@ -1,0 +1,72 @@
+ CUDNN_HALF=1 
+0
+net.optimized_memory = 0 
+mini_batch = 1, batch = 64, time_steps = 1, train = 0 
+Create CUDA-stream - 0 
+ Create cudnn-handle 0 
+nms_kind: greedynms (1), beta = 0.600000 
+nms_kind: greedynms (1), beta = 0.600000 
+nms_kind: greedynms (1), beta = 0.600000 
+
+ seen 64, trained: 363 K-images (5 Kilo-batches_64) 
+Enter Image Path:  Detection layer: 139 - type = 28 
+ Detection layer: 150 - type = 28 
+ Detection layer: 161 - type = 28 
+/am/dataset/second_approach/images/maksssksksss521.png: Predicted in 22.199000 milli-seconds.
+person: 84%	(left_x:   28   top_y:   -6   width:  385   height:  237)
+head: 97%	(left_x:  170   top_y:    6   width:  109   height:  120)
+Enter Image Path:  Detection layer: 139 - type = 28 
+ Detection layer: 150 - type = 28 
+ Detection layer: 161 - type = 28 
+/am/dataset/second_approach/images/maksssksksss473.png: Predicted in 22.178000 milli-seconds.
+person: 77%	(left_x:   19   top_y:   51   width:  145   height:  159)
+head: 99%	(left_x:   47   top_y:   61   width:   46   height:   62)
+person: 80%	(left_x:   68   top_y:   16   width:  131   height:  188)
+head: 99%	(left_x:  107   top_y:   23   width:   42   height:   63)
+person: 79%	(left_x:  171   top_y:    7   width:  143   height:  195)
+head: 99%	(left_x:  235   top_y:   10   width:   43   height:   59)
+person: 98%	(left_x:  253   top_y:   56   width:  140   height:  151)
+head: 98%	(left_x:  292   top_y:   57   width:   41   height:   61)
+Enter Image Path:  Detection layer: 139 - type = 28 
+ Detection layer: 150 - type = 28 
+ Detection layer: 161 - type = 28 
+/am/dataset/second_approach/images/maksssksksss110.png: Predicted in 22.220000 milli-seconds.
+person: 44%	(left_x:   -1   top_y:  149   width:   63   height:  118)
+head: 95%	(left_x:    2   top_y:   81   width:   53   height:   68)
+person: 26%	(left_x:    3   top_y:   81   width:   63   height:  182)
+person: 63%	(left_x:   10   top_y:  115   width:  119   height:  146)
+head: 55%	(left_x:   17   top_y:    2   width:   34   height:   49)
+head: 38%	(left_x:   39   top_y:  111   width:   50   height:   81)
+person: 39%	(left_x:   40   top_y:  163   width:   85   height:  102)
+head: 25%	(left_x:   41   top_y:   39   width:   36   height:   41)
+person: 40%	(left_x:   44   top_y:   68   width:   96   height:  194)
+head: 92%	(left_x:   55   top_y:  168   width:   65   height:   93)
+head: 93%	(left_x:   64   top_y:   85   width:   46   height:   58)
+head: 92%	(left_x:   75   top_y:    2   width:   35   height:   45)
+person: 61%	(left_x:   81   top_y:  114   width:  155   height:  154)
+person: 25%	(left_x:  100   top_y:   91   width:   86   height:  148)
+head: 82%	(left_x:  110   top_y:  112   width:   69   height:  108)
+head: 73%	(left_x:  113   top_y:  188   width:   65   height:   76)
+person: 46%	(left_x:  120   top_y:  163   width:  120   height:  103)
+head: 28%	(left_x:  123   top_y:   75   width:   53   height:   68)
+person: 30%	(left_x:  158   top_y:   45   width:   89   height:  228)
+head: 36%	(left_x:  159   top_y:  169   width:   44   height:   62)
+head: 89%	(left_x:  173   top_y:   50   width:   46   height:   57)
+person: 75%	(left_x:  201   top_y:  112   width:  125   height:  159)
+person: 26%	(left_x:  208   top_y:   38   width:  110   height:  218)
+head: 27%	(left_x:  212   top_y:   48   width:   33   height:   33)
+head: 45%	(left_x:  225   top_y:  196   width:  110   height:   70)
+head: 77%	(left_x:  231   top_y:    4   width:   36   height:   41)
+head: 95%	(left_x:  232   top_y:  124   width:   49   height:   72)
+head: 54%	(left_x:  237   top_y:   50   width:   40   height:   48)
+head: 96%	(left_x:  248   top_y:   71   width:   48   height:   63)
+head: 46%	(left_x:  249   top_y:  163   width:   82   height:   88)
+head: 50%	(left_x:  256   top_y:  247   width:   54   height:   20)
+person: 27%	(left_x:  286   top_y:   60   width:   88   height:  205)
+person: 58%	(left_x:  303   top_y:  116   width:   96   height:  148)
+head: 59%	(left_x:  304   top_y:   85   width:   52   height:   74)
+person: 41%	(left_x:  342   top_y:   65   width:   61   height:  192)
+head: 50%	(left_x:  350   top_y:   50   width:   40   height:   50)
+head: 32%	(left_x:  353   top_y:  162   width:   45   height:   92)
+head: 51%	(left_x:  380   top_y:    2   width:   21   height:   37)
+Enter Image Path: 
